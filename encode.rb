@@ -92,7 +92,23 @@ def pid_file
 end
 
 def log(text)
-  puts "#{Time.now}: #{text}"
+  log_dir.mkpath
+  log_file.open('a') {|f|
+    f << "#{Time.now}: #{text}\n"
+  }
+  puts text
+end
+
+def log_dir
+    source_dir + 'log'
+end
+
+def log_file
+    log_dir + "#{Pathname.new(__FILE__).basename}.log"
+end
+
+def source_dir
+    Pathname.new(__FILE__).expand_path.parent
 end
 
 main
