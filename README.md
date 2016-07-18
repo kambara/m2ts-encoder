@@ -8,4 +8,4 @@ Edit M2TS_DIR and MP4_DIR in encode.ts.
 
 ## crontab
 
-    0 2 * * * /home/kambara/m2ts-encoder/encode.rb >> /home/kambara/m2ts-encoder/logs/encode.log 2>&1
+    0 2 * * * /home/kambara/m2ts-encoder/encode.rb >> /var/log/m2ts-encoder.log 2>&1
