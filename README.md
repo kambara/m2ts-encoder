@@ -2,7 +2,9 @@
 
 ## Usage
 
-    /home/kambara/m2ts-encoder/encode.rb
+Edit M2TS_DIR and MP4_DIR in encode.ts.
+
+    ./encode.rb
 
 ## crontab
 
